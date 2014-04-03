@@ -3,7 +3,7 @@
 // Copyright (c) 2014. All rights reserved.
 //
 
-typedef void (^SeguePreparationBlock)(id sourceViewController, id destinationViewController, id sender);
+typedef void (^SeguePreparationBlock)(id destinationViewController, id sender);
 
 @interface UIViewController (TestableSegues)
 
@@ -14,8 +14,8 @@ typedef void (^SeguePreparationBlock)(id sourceViewController, id destinationVie
 - (void)prepareForSegueWithIdentifier:(NSString *)identifier destinationViewController:(id)destinationViewController;
 
 // Accesses seguePreparationBlocks
-+ (SeguePreparationBlock)seguePreparationBlockForIdentifier:(NSString *)identifier;
+- (SeguePreparationBlock)seguePreparationBlockForIdentifier:(NSString *)identifier;
 
 // Subclasses must override this public method to supply a dictionary of segue preparation blocks
-+ (NSDictionary *)seguePreparationBlocks;
+- (NSDictionary *)seguePreparationBlocks;
 @end

@@ -21,11 +21,11 @@
     return self;
 }
 
-+ (NSDictionary *)seguePreparationBlocks {
+- (NSDictionary *)seguePreparationBlocks {
     return @{
-            @"seg_testable_segue":^(HSPTestSourceUIViewController *source, HSPTestDestinationUIViewController *destination, id sender) {
+            @"seg_testable_segue":^(HSPTestDestinationUIViewController *destination, id sender) {
                 NSLog(@"Well this is cool.");
-                [destination say:source.property];
+                [destination say:self.property];
             }
     };
 }

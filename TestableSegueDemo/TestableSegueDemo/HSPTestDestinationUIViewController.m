@@ -9,7 +9,7 @@
 
 @implementation HSPTestDestinationUIViewController
 
--(void) say:(NSString *)string {
+- (void)say:(NSString *)string {
     NSLog(@"%@", string);
 }
 
