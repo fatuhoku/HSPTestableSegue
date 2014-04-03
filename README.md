@@ -80,14 +80,23 @@ that you can verify its behaviour.
     [MKTVerify(mockViewController) setModel:source.property];   // verify behaviour (here, OCMockito is used)
 ```
 
-If you're unsure on anything, a demo project has been included. Check it out
-and run the test to get a feel for how this works.  If in doubt, just read
-through the code. There's not a huge amount of it =]
+If you're unsure on anything, a demo project has been included. To run the included test, you'll need [Cocoapods](http://cocoapods.org) to download OCMockito like so:
+
+```
+cd TestableSegueDemo
+pod install
+open TestableSegueDemo.xcworkspace
+```
+
+And just hit `Cmd+U`.
+
+
+If in doubt, just read the code. There's not a huge amount of it =]
 
 
 ### Installation
 
-Just copy `UIViewController+TestableSegues.{h,m}` into your project and start
+Just copy `Source/UIViewController+TestableSegues.{h,m}` into your project and start
 using them right away away.
 
 
